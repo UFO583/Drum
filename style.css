@@ -1,0 +1,207 @@
+html {
+  font-size: 10px;
+  background: url('./background.jpg') bottom center;
+  background-size: cover;
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+
+/* This is the background part */
+.bc {
+  z-index: -199;
+  position: absolute;
+  top: -50px;
+  left: -50PX;
+  width: 120%;
+  height: 120%;
+  animation: rotate 1s infinite alternate linear;
+}
+/* make the background move up and down */
+.moveup {
+  animation: moveup .5s alternate linear;
+}
+
+@keyframes rotate {
+   0% {
+      transform: rotate(-2deg);
+    }
+   100% {
+      transform: rotate(2deg);
+    }
+}
+
+@keyframes moveup {
+   0% {
+      transform: translate(0, 0);
+    }
+   100% {
+      transform: translate(0, 20px);
+    }
+}
+
+
+.keys {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.key {
+  border: .4rem solid black;
+  border-radius: .5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  transition: all .07s ease;
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(255,192,203, .3);
+  text-shadow: 0 0 .5rem black;
+  cursor: pointer;
+  /*   content not able to chose */
+  -webkit-user-select: none;   
+  -moz-user-select: none;    
+  -ms-user-select: none;    
+  user-select: none;
+}
+
+.playing {
+  transform: scale(10);
+  border-color: rebeccapurple;
+  box-shadow: 0 0 1rem pink;
+  transition: .2s all;
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: hotpink;
+}
+
+
+
+
+/* The music background */
+.musicbc {
+  position: absolute;
+  z-index: 999;
+}
+
+/*  The mouse background*/
+.mousebc {
+  position: absolute;
+  z-index: 123;
+  width: 40px;
+  height: 40px;
+}
+
+/*  The yee element*/
+.yee {
+  position: absolute;
+  z-index: 99999999;
+  left: 0 ;
+  top:0 ;
+  font-size: 30px;
+  color: white;
+}
+
+/*  creat the yee box*/
+.yeeBox {
+  z-index: 88821323213;
+  position: absolute;
+  width: 500px;
+  height: 200px;
+  left: 50%;
+  top: 65%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+/* creat a missionbit logo */
+.logo {
+  z-index: 99999;
+  position: absolute;
+  left: 50%;
+  top: -5%;
+  width: 300px;
+  height: 450px;
+  transform: translateX(-50%);
+  transition: all 1s;
+  cursor: pointer;
+}
+
+.logo:hover {
+  width: 400px;
+  height: 600px;
+}
+
+
+/* The best pop up box */
+.best {
+  display: none;
+  z-index: 88899999999999;
+  position: absolute;
+  width: 999px;
+  height: 333px;
+  left: 50%;
+  top: 30%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  box-sizing: border-box;
+  padding-top: 80px;
+  border: 10px solid purple;
+  background-color: rgba(0,0,0,0.7);
+  /*   content not able to chose */
+  -webkit-user-select: none;   
+  -moz-user-select: none;    
+  -ms-user-select: none;    
+  user-select: none;
+}
+
+/* The close button */
+.bestClose {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: -25px;
+  top: -25px;
+  border-radius: 50%;
+  border: 5px solid hotpink;
+  background-color: pink;
+  text-align: center;
+  line-height: 50px;
+  transition: all .8s;
+  cursor: pointer;
+  /*   content not able to chose */
+  -webkit-user-select: none;   
+  -moz-user-select: none;    
+  -ms-user-select: none;    
+  user-select: none;
+}
+
+.bestClose:hover {
+/*   width: 70px;
+  height: 70px; */
+  transform: scale(120%);
+  background-color: deeppink;
+}
